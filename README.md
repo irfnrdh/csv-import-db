@@ -130,4 +130,4 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 Irfannur Diah - irfnrdh@gmail.com
 
-Project Link: [https://github.com/yourusername/csv-import-db](https://github.com/irfnrdh/csv-import-db)
+Project Link: [https://github.com/irfnrdh/csv-import-db](https://github.com/irfnrdh/csv-import-db)
