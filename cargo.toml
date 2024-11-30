@@ -1,0 +1,59 @@
+[package]
+name = "csv-import-db"
+version = "0.1.0"
+edition = "2024"
+authors = ["Irfannur Diah <irfnrdh@gmail.com>"]
+description = "A flexible multi-database CSV importer with real-time processing"
+license = "MIT"
+repository = "https://github.com/irfnrdh/csv-import-db"
+
+[dependencies]
+# Async runtime
+tokio = { version = "1", features = ["full"] }
+
+# Database
+sqlx = { version = "0.7", features = [
+    "runtime-tokio", 
+    "mysql", 
+    "postgres", 
+    "sqlite"
+] }
+mysql = "23.0"
+postgres = "0.19"
+
+# CSV Handling
+csv = "1.1"
+
+# Serialization
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+
+# Validation
+validator = { version = "0.15", features = ["derive"] }
+
+# Error Handling
+anyhow = "1.0"
+thiserror = "1.0"
+
+# Logging
+log = "0.4"
+env_logger = "0.9"
+
+# File Watching
+notify = "4.0"
+
+# Notifications
+teloxide = { version = "0.12", optional = true }
+
+[dev-dependencies]
+mockall = "0.11"
+fake = "2.5"
+
+[features]
+default = []
+telegram-notifications = ["teloxide"]
+
+[profile.release]
+opt-level = 3
+lto = true
+codegen-units = 1
