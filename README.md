@@ -23,7 +23,7 @@ A robust, flexible Rust-based CSV importer that supports multiple databases, rea
   - Telegram
   - Email (Planned)
   - Slack (Planned)
-  - Custom notification channels
+  - Custom notification channels (Planned)
 
 ## 🛠 Installation
 
@@ -69,6 +69,10 @@ telegram_chat_id = "your_chat_id"
 cargo run --release
 ```
 
+Generate Dataset Samples
+```bash
+ cargo run --bin generate_csv
+```
 ## 📂 Project Structure
 
 ```
@@ -102,6 +106,7 @@ multi-db-csv-importer/
 │   └── importer_tests.rs
 │
 ├── Cargo.toml              # Project dependencies
+├── Config.toml             # Project env
 ├── README.md               # Project documentation
 ├── LICENSE                 # Project license
 └── .gitignore              # Git ignore file

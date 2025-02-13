@@ -1,0 +1,10 @@
+[database]
+types = ["mysql"] # mysql, postgress, sqlite
+host = "localhost"
+# port = 5432
+username = "root"
+password = "katasandi"
+
+[notification]
+telegram_token = "your_telegram_bot_token"
+telegram_chat_id = "your_chat_id"
